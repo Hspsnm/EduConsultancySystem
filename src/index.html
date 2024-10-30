@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Myapp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email === "" || password === "") {
+            alert("Email and Password are required!");
+        } else {
+            // Redirect to dashboard on successful login
+            window.location.href = "dashboard.html"; 
+        }
+    });
+</script>
+</body>
+</html>
